@@ -1,0 +1,152 @@
+% ****** Start of file apssamp.tex ******
+%
+%   This file is part of the APS files in the REVTeX 4.2 distribution.
+%   Version 4.2a of REVTeX, December 2014
+%
+%   Copyright (c) 2014 The American Physical Society.
+%
+%   See the REVTeX 4 README file for restrictions and more information.
+%
+% TeX'ing this file requires that you have AMS-LaTeX 2.0 installed
+% as well as the rest of the prerequisites for REVTeX 4.2
+%
+% See the REVTeX 4 README file
+% It also requires running BibTeX. The commands are as follows:
+%
+%  1)  latex apssamp.tex
+%  2)  bibtex apssamp
+%  3)  latex apssamp.tex
+%  4)  latex apssamp.tex
+%
+\documentclass[%
+ reprint,
+%superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+%preprint,
+%preprintnumbers,
+%nofootinbib,
+%nobibnotes,
+%bibnotes,
+ amsmath,amssymb,
+ aps,
+%pra,
+%prb,
+%rmp,
+%prstab,
+%prstper,
+%floatfix,
+]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%\usepackage{hyperref}% add hypertext capabilities
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+
+%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+
+\begin{document}
+
+\preprint{APS/123-QED}
+
+\title{G21cmFit: A Python Package For Parameter Estimation of Global 21cm Signal}
+%\thanks{A footnote to the article title}%
+
+\author{Aryana Haghjoo$^{1,2}$}
+\email{aryana.haghjoo@mail.mcgill.ca}
+ %\altaffiliation[Also at ]{Physics Department, XYZ University.}
+\author{Jonathan Sievers$^{1,2}$}%
+\author{Oscar Hernandez$^{1,3}$}
+\affiliation{%
+$^1$Department of Physics, McGill University, 3600 Rue University, Montréal, QC H3A 2T8, Canada\\
+$^2$Trottier Space Institute, 3550 Rue University, Montréal, QC H3A 2A7, Canada\\
+$^3$Marianopolis College, 4873 Westmount Ave., Westmount, QC H3Y 1X9, Canada
+}%
+
+\begin{comment}
+    
+\collaboration{MUSO Collaboration}%\noaffiliation
+
+\author{Charlie Author}
+ \homepage{http://www.Second.institution.edu/~Charlie.Author}
+\affiliation{
+ Second institution and/or address\\
+ This line break forced% with \\
+}%
+\affiliation{
+ Third institution, the second for Charlie Author
+}%
+\author{Delta Author}
+\affiliation{%
+ Authors' institution and/or address\\
+ This line break forced with \textbackslash\textbackslash
+}%
+
+\collaboration{CLEO Collaboration}%\noaffiliation
+\end{comment}
+
+\date{\today}% It is always \today, today,
+             %  but any date may be explicitly specified
+
+\begin{abstract} 
+Constraining the period between the dark ages and reionization has recently emerged as one of the challenges of modern radio astronomy. The motivation behind this interest is the fact that there is a clear correlation between the key features of the global $21cm$ signal and underlying astrophysical properties of the high redshift Universe. These correlations can be used to directly link measurements of the global $21cm$ signal to astrophysical quantities. Moreover, the global $21cm$ signal is a novel probe of physics beyond the standard model of cosmology and astrophysics, and the majority of these proposed non-standard mechanisms are expected to leave their footprints on the value of physical parameters. Therefore, the urge to perform proper parameter estimation on the corresponding observational data is undeniable. In this work, we introduce \emph{G21cmFit}, an efficient Python package to estimate the astrophysical parameters of the global 21cm signal. This package takes advantage of Markov Chain Monte Carlo (MCMC) combined with the Levenberg-Marquardt (LM) algorithm to fit theoretical models to mock/experimental data of global $21cm$ signal.
+\end{abstract}
+
+\keywords{Parameter Estimation, Global 21cm Signal}
+                              %display desired
+\maketitle
+
+%\tableofcontents
+
+\section{Background and Introduction}
+Background: Briefly explain the significance of the global 21cm signal and its relevance in cosmology and astrophysics.\\
+Motivation: Describe the need for accurate parameter estimation in studying the 21cm signal and the importance of an efficient Python package.\\
+Objectives: Clearly state the goals of the paper and the specific contributions of the Python package.\\
+outline of the paper\\
+The global $21cm$ signal is the average over the brightness temperature of the $21cm$ line across the entire sky. It is a measure of the overall state of the \gls{igm} and presents itself as an excess absorption or emission in different redshift regions. This radiation is a piece of observational evidence for certain characteristics of the \gls{igm} in the early universe (e.g., temperature, density, and reionization state). These properties are determined by the complex interplay between the cosmic radiation field, the formation and evolution of the first stars and galaxies, and the feedback processes that these sources exert on their surroundings\cite{21century}.\par
+Besides all the above-mentioned applications, the global $21cm$ signal is a \textbf{strong probe for non-standard physics} during the dark ages and \gls{eor}. It has the potential to shed light on mysteries surrounding dark matter/dark energy, the existence of cosmic strings, and even certain particle interaction  \cite{dark_nature_21, constrain_dm_21, cosmic_string_brandenberger, ee_interaction_21, neutrino_21} \footnote{These effects will be discussed more in \ref{chap:global21cm,sub:non_standard}.}. This capacity of the global $21cm$ signal is the main motivation of this research.
+
+
+\section{Methodology}
+Describe the algorithm and techniques used in the Python package to estimate the parameters of the global 21cm signal.\\
+Highlight any novel or unique approaches employed.
+\section{Package Overview}
+Provide a general description of the Python package, including its name, version, and dependencies.\\
+Outline the functionalities and main features of the package.\\
+\section{Performance Evaluation}
+\section{discussion and conclusion}
+Summarize the key points discussed in the paper.
+Reiterate the significance of the Python package in advancing research related to the global 21cm signal.\\
+Provide a closing statement on the potential impact of the package in the field.\\
+Review existing methods and tools used for parameter estimation of the global 21cm signal.\\
+Compare and contrast these methods with the features and capabilities of your Python package.\\
+Limitations\\
+Future Work\\
+\begin{acknowledgements}
+     We acknowledge the help of Jordan Mirocha for developing the ARES code and responding to questions on the specific applications of this package. Also, we would like to thank the \emph{Digital Research Alliance of Canada} for offering the computational resources needed for the analysis of this study.
+\end{acknowledgements}
+
+\appendix
+
+\section{Appendixes}
+\subsection{Appendix A: Derivation of Levenberg-Marquardt Algorithm}
+
+%\begin{subequations}
+%\begin{eqnarray}
+%\end{eqnarray}
+%\end{subequations}
+
+
+\bibliography{apssamp}% Produces the bibliography via BibTeX.
+
+\end{document}
